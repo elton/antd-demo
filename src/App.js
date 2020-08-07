@@ -1,8 +1,15 @@
 import React, { useState } from "react";
-import { DatePicker, message, Alert, Button, Tooltip } from "antd";
+import {
+  DatePicker,
+  message,
+  Alert,
+  Button,
+  Tooltip,
+  Divider,
+  Space,
+} from "antd";
 import moment from "moment";
 import "moment/locale/zh-cn";
-import "antd/dist/antd.css";
 import { SearchOutlined } from "@ant-design/icons";
 import "./App.scss";
 
@@ -13,14 +20,13 @@ import Typo from "./components/Typo";
 moment.locale("zh-cn");
 
 const ButtonDemo = () => (
-  <>
+  <Space>
     <Button type="primary">Primary Button</Button>
     <Button>Default Button</Button>
     <Button type="dashed">Dashed Button</Button>
-    <br />
     <Button type="text">Text Button</Button>
     <Button type="link">Link Button</Button>
-  </>
+  </Space>
 );
 
 const DateDemo = () => {
@@ -32,7 +38,7 @@ const DateDemo = () => {
     setDate(value);
   };
   return (
-    <div style={{ width: 400, margin: "100px auto" }}>
+    <div style={{ width: 400, margin: "10px auto" }}>
       <DatePicker onChange={handleChange} />
       <div style={{ marginTop: 16 }}>
         <Alert
@@ -45,7 +51,7 @@ const DateDemo = () => {
 };
 
 const IconButton = () => (
-  <>
+  <Space>
     <Tooltip title="search">
       <Button type="primary" shape="circle" icon={<SearchOutlined />} />
     </Tooltip>
@@ -70,26 +76,31 @@ const IconButton = () => (
     <Button type="dashed" icon={<SearchOutlined />}>
       Search
     </Button>
-  </>
+  </Space>
 );
 
 const App = () => (
   <>
+    <Divider>日历 📅</Divider>
     <p>
       <DateDemo />
     </p>
+    <Divider>Button</Divider>
     <p>
       <ButtonDemo />
-    </p>
-    <p>
-      <IconButton />
     </p>
     <p>
       <SizeButton />
     </p>
     <p>
+      <IconButton />
+    </p>
+    <Divider>Icon</Divider>
+
+    <p>
       <Icon />
     </p>
+    <Divider>Typograph</Divider>
     <p>
       <Typo />
     </p>

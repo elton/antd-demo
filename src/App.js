@@ -8,6 +8,7 @@ import "./App.scss";
 
 import SizeButton from "./components/SizeButton";
 import Icon from "./components/Icon";
+import Typo from "./components/Typo";
 
 moment.locale("zh-cn");
 
@@ -88,6 +89,9 @@ const App = () => (
     </p>
     <p>
       <Icon />
+    </p>
+    <p>
+      <Typo />
     </p>
   </>
 );

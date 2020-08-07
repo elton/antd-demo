@@ -1,12 +1,12 @@
 import React from "react";
 import { Divider } from "antd";
-
-import "./App.scss";
-
 import Buttons from "./components/Buttons";
 import Icon from "./components/Icon";
 import Typo from "./components/Typo";
 import Calendar from "./components/Calendar";
+import Grids from "./components/Grids";
+
+import "./App.scss";
 
 const App = () => (
   <>
@@ -25,6 +25,10 @@ const App = () => (
     <Divider>Typograph</Divider>
     <p>
       <Typo />
+    </p>
+    <Divider>Grids</Divider>
+    <p>
+      <Grids />
     </p>
   </>
 );

@@ -10,7 +10,12 @@ import "./App.scss";
 
 const App = () => (
   <>
-    <Divider>日历 📅</Divider>
+    <Divider>
+      日历{" "}
+      <span role="img" aria-label="Calendar">
+        📅
+      </span>
+    </Divider>
     <p>
       <Calendar />
     </p>

@@ -7,6 +7,7 @@ import { SearchOutlined } from "@ant-design/icons";
 import "./App.scss";
 
 import SizeButton from "./components/SizeButton";
+import Icon from "./components/Icon";
 
 moment.locale("zh-cn");
 
@@ -84,6 +85,9 @@ const App = () => (
     </p>
     <p>
       <SizeButton />
+    </p>
+    <p>
+      <Icon />
     </p>
   </>
 );

@@ -1,9 +1,12 @@
 import React, { useState } from "react";
-import { DatePicker, message, Alert, Button } from "antd";
+import { DatePicker, message, Alert, Button, Tooltip } from "antd";
 import moment from "moment";
 import "moment/locale/zh-cn";
 import "antd/dist/antd.css";
+import { SearchOutlined } from "@ant-design/icons";
 import "./App.scss";
+
+import SizeButton from "./components/SizeButton";
 
 moment.locale("zh-cn");
 
@@ -39,6 +42,35 @@ const DateDemo = () => {
   );
 };
 
+const IconButton = () => (
+  <>
+    <Tooltip title="search">
+      <Button type="primary" shape="circle" icon={<SearchOutlined />} />
+    </Tooltip>
+    <Button type="primary" shape="circle">
+      A
+    </Button>
+    <Button type="primary" icon={<SearchOutlined />}>
+      Search
+    </Button>
+    <Tooltip title="search">
+      <Button shape="circle" icon={<SearchOutlined />} />
+    </Tooltip>
+    <Button icon={<SearchOutlined />}>Search</Button>
+    <br />
+    <Tooltip title="search">
+      <Button shape="circle" icon={<SearchOutlined />} />
+    </Tooltip>
+    <Button icon={<SearchOutlined />}>Search</Button>
+    <Tooltip title="search">
+      <Button type="dashed" shape="circle" icon={<SearchOutlined />} />
+    </Tooltip>
+    <Button type="dashed" icon={<SearchOutlined />}>
+      Search
+    </Button>
+  </>
+);
+
 const App = () => (
   <>
     <p>
@@ -46,6 +78,12 @@ const App = () => (
     </p>
     <p>
       <ButtonDemo />
+    </p>
+    <p>
+      <IconButton />
+    </p>
+    <p>
+      <SizeButton />
     </p>
   </>
 );
